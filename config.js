@@ -93,6 +93,7 @@ var pMan = {
 		thirdSplits: true,      // ⧯⧮⧮  ⧮⧯⧮  ⧮⧮⧯
 		fullscreenToggle: true, // ⧈
 		spaceShifts: true,      // ⇠◻︎ ◻︎⇢
+		screenShifts: true,
 		autoSplits: true
 	},
 
@@ -124,6 +125,9 @@ var pMan = {
 
 		prevSpace: { mod: MOD.ctrl_alt_cmd, key: 'left' },
 		nextSpace: { mod: MOD.ctrl_alt_cmd, key: 'right' },
+
+		prevScreen: { mod: MOD.ctrl_alt, key: '[' },
+		nextScreen: { mod: MOD.ctrl_alt, key: ']' },
 
 		autoHalves: { mod: MOD.alt, key: '2' },
 		autoThirds: { mod: MOD.alt, key: '3' },

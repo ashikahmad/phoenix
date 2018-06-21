@@ -84,6 +84,18 @@ if(pMan.config.spaceShifts) {
 	});
 }
 
+if(pMan.config.screenShifts) {
+	pMan.registerShortcut(pMan.shortcuts.prevScreen, function() {
+		Window.focused() &&
+		Window.focused().moveToScreen('east');
+	});
+
+	pMan.registerShortcut(pMan.shortcuts.nextScreen, function() {
+		Window.focused() &&
+		Window.focused().moveToScreen('west');
+	});
+}
+
 // Auto-splits
 if(pMan.config.autoSplits) {
 	pMan.registerShortcut(pMan.shortcuts.autoHalves, function(){

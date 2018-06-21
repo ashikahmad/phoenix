@@ -62,6 +62,18 @@ Window.prototype.moveToSpace = function(direction){
 	curSpace.moveWindow(this).focus();
 };
 
+Window.prototype.moveToScreen = function(direction){
+	var allScreens = Screen.all();
+	if(allScreens.length < 2) { return; }
+
+	var index = _.indexOf(allScreens, this.screen());
+	if(direction == 'west') { index++; if(index >= allScreens.length) { index = 0 }}
+	else { index--; if(index < 0) { index = allScreens.length - 1 }}
+	
+	nextSpace = allScreens[index].currentSpace();
+	nextSpace.moveWindow(this).focus();
+};
+
 // ------[ Screen Extension ]------
 
 Screen.prototype.usableFrame = function(){
